@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+::-webkit-scrollbar {
+  display: block;
+  width: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 1em;
+  background: #2f87cf;
+  border-right: none;
+  border-left: none;
+}
+
+::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  --bgr-blue: #7cafda;
+  --tab-color: #E8F0F2;
+  --border: 1px solid #39A2DB;
+}
+
+ul.nav {
+  position: fixed;
+  top: 2em;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #39A2DB;
+  border-radius: 2rem;
+  padding-left: 0px;
+  @media (max-width: 768px) {
+    width: 90%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul.nav li {
+  width: 50%;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+ul.nav li:hover {
+  background: rgba(50, 224, 196, 0.15);
+  border-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+ul.nav li.active {
+  border-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background: #39A2DB;
+}
+
+.App {
+  background-color: var(--bgr-blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Tabs {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto 0;
+  padding: 2rem 1rem;
+  color: black; 
+ @media (max-width: 769px) {
+  padding: 2rem 0;
+ }
 }
 
-.App-link {
-  color: #61dafb;
+.Switchers {
+  width: 30%;
+  display: flex;
+  margin-top: 1em;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.degres {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul.degres li {
+  width: 30%;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+  border: 1px solid #39A2DB;
+  border-radius: 2rem;
+}
+
+ul.degres li:hover {
+  background: rgba(50, 224, 196, 0.15);
+  border-radius: 2rem;
+}
+
+ul.degres li.active {
+  border-radius: 2rem;
+  background: #39A2DB;
+}
+
+.WeatherPage {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heatIndexWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+}
+
+.calc_result{
+  width: 40%;
+  height: 50px;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: #2f87cf;
+  text-align: center;
+}
+.calc_result:empty {
+  background-color: #2f87cf;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.calc_inputs {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: auto;
+  height: 45px;
+  padding: 5px 15px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: #39A2DB;
+  place-content: center;
+  text-align: center;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+  margin-top: 1em;
+  padding: 5px 5px;
+  color: #E5E5E5;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background: #2f87cf;
+  border: 1px solid #39A2DB;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #39A2DB;
+  border: 1px solid #2f87cf;
 }

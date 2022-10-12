@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { BrowserRouter } from "react-router-dom";
 import './App.css';
+import HeatIndexCalc from './Components/HeatIndexCalc';
+import LineChart from './Components/LineChart';
+import Tabs from './Components/Tabs';
+import Weather from './Components/Weather';
+import { DateTimeContext, TemperatureContext, RelHumidity } from './context/context';
 
 function App() {
+
+  const [temperature, setTemperature] = useState('');
+  const [datetimes, setDateTimes] = useState('');
+  const [humidity, setHumidity] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='Tabs'>
+        <RelHumidity.Provider value={{humidity, setHumidity}}>
+          <TemperatureContext.Provider value={{temperature, setTemperature}}>
+            <DateTimeContext.Provider value={{datetimes, setDateTimes}}>
+              <Tabs/>
+            </DateTimeContext.Provider>
+          </TemperatureContext.Provider>
+        </RelHumidity.Provider>
+      </div>
     </div>
   );
 }
