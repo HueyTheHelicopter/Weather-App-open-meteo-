@@ -4,7 +4,6 @@ import '../App.css';
 const HeatIndexCalc = () => {
 
     const [temperature, setTemperature] = useState('');
-    const [temperatureF, setTemperatureF] = useState('');
     const [rhumidity, setRhumidity] = useState('');
     const [activeLi, setActiveLi] = useState('C');
 

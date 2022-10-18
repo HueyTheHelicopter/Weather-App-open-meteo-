@@ -24,7 +24,39 @@ const view = (array) => {
 
 return (
     <div className={cl.table_wrapper}>
-        <table>
+        <div className={cl.table_headers}>
+            <h4>Date and Time</h4>
+            <h4>Temperature ℃</h4>
+            <h4>Relative Humidity</h4>
+            <h4>Surface Pressure</h4>
+        </div>
+        <div className={cl.table_data}>
+            <div className={cl.table_row}>
+                {
+                    Object.values(hourly.time).map((item) => {
+                        return <p>{formatDateTime(item)}</p> })
+                }
+            </div>
+            <div className={cl.table_row}>
+                {
+                    Object.values(hourly.temperature_2m).map((item) => {
+                        return <p>{item}</p> })
+                }
+            </div>
+            <div className={cl.table_row}>
+                {
+                    Object.values(hourly.relativehumidity_2m).map((item) => {
+                        return <p>{item}</p> })
+                }
+            </div>
+            <div className={cl.table_row}>
+                {
+                    Object.values(hourly.surface_pressure).map((item) => {
+                        return <p>{item}</p> })
+                }
+            </div>
+        </div>
+        {/* <table>
             <tr>
                 <th>Date & Time</th>
                 {view(hourly.time)}
@@ -41,8 +73,8 @@ return (
                 <th>Surface Pressure</th>
                 {view(hourly.surface_pressure)}
             </tr>
-        </table>
-</div>
+        </table> */}
+    </div>
 )
 
 }

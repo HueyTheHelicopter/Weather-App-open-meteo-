@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import '../App.css';
-import cl from './designs/LineChart.module.css'
 import ReactApexChart from 'react-apexcharts'
 import { DateTimeContext, TemperatureContext } from "../context/context";
 
-const LineChart = (props) => {	
+const LineChart = () => {	
 
     const { temperature } = useContext(TemperatureContext);
     const { datetimes } = useContext(DateTimeContext);
