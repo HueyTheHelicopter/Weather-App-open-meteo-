@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/Weather-App-open-meteo-/static/css/main.e253511c.css",
-    "main.js": "/Weather-App-open-meteo-/static/js/main.ab7d37ff.js",
-    "static/js/787.49132870.chunk.js": "/Weather-App-open-meteo-/static/js/787.49132870.chunk.js",
-    "index.html": "/Weather-App-open-meteo-/index.html",
-    "main.e253511c.css.map": "/Weather-App-open-meteo-/static/css/main.e253511c.css.map",
-    "main.ab7d37ff.js.map": "/Weather-App-open-meteo-/static/js/main.ab7d37ff.js.map",
-    "787.49132870.chunk.js.map": "/Weather-App-open-meteo-/static/js/787.49132870.chunk.js.map"
+    "main.css": "/HueyTheHelicopter/Weather-App-open-meteo-/static/css/main.f9a7c3f7.css",
+    "main.js": "/HueyTheHelicopter/Weather-App-open-meteo-/static/js/main.cc3bf353.js",
+    "static/js/787.49132870.chunk.js": "/HueyTheHelicopter/Weather-App-open-meteo-/static/js/787.49132870.chunk.js",
+    "static/media/barometer.png": "/HueyTheHelicopter/Weather-App-open-meteo-/static/media/barometer.6f86d760766c12d80b0c.png",
+    "static/media/humidity.png": "/HueyTheHelicopter/Weather-App-open-meteo-/static/media/humidity.3fd184088f3cbf66aa10.png",
+    "index.html": "/HueyTheHelicopter/Weather-App-open-meteo-/index.html",
+    "main.f9a7c3f7.css.map": "/HueyTheHelicopter/Weather-App-open-meteo-/static/css/main.f9a7c3f7.css.map",
+    "main.cc3bf353.js.map": "/HueyTheHelicopter/Weather-App-open-meteo-/static/js/main.cc3bf353.js.map",
+    "787.49132870.chunk.js.map": "/HueyTheHelicopter/Weather-App-open-meteo-/static/js/787.49132870.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e253511c.css",
-    "static/js/main.ab7d37ff.js"
+    "static/css/main.f9a7c3f7.css",
+    "static/js/main.cc3bf353.js"
   ]
 }
